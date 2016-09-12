@@ -1,0 +1,19 @@
+div.description{
+
+}
+
+img{
+  width: 100%;
+  margin: 25px auto;
+  display: block;
+}
+
+button{
+  margin-bottom: 25px;
+  white-space: normal;
+}
+
+.image-carrousel{
+  padding-left: 0;
+  padding-right: 0;
+}
