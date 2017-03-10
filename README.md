@@ -81,7 +81,7 @@ class FirstAction extends Action{
     this.nextSceneId = 'second-scene';
   }
 
-  /*
+  /*  
    * Method called after action, allows developers to change the character model
    * as they see fit
    */
@@ -114,7 +114,6 @@ export class InitialScene extends Scene{
     this.images.push( 'assets/initial-scene-small.jpeg' );
 
     this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
     /* Tells the game model this scene should be the first. Default is false */
     this.isFirstScene = true;
 
