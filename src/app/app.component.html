@@ -1,0 +1,14 @@
+<div class="splashBox" *ngIf="showSplash">
+  <img class="splashScreen"  src="{{splashScreen.url}}" (click)="onSplashClicked()"/>
+  <span class="splashLinks">
+    <a target="_blank" href="/copyright.html">Copyright © "2016" <strong>Xtryptic Studios</strong></a>
+    <a target="_blank" href="https://www.patreon.com/bePatron?u=5115815">
+      <img class="patreonIcon" src="https://www.patreon.com/images/patreon_navigation_logo_mini_orange.png"/>
+      Become a Patron!</a>
+    <a target="_blank" style="float:left;margin:0;" href="https://bitbucket.org/xtryptic-studios/afternoon-to-remember/issues">Found a bug? Please report it here</a>
+  </span>
+</div>
+<div class="disclaimer">
+  <img class="disclaimerScreen" *ngIf="showDisclaimer" src="{{disclaimerScreen.url}}" (click)="onDisclaimerClicked()"/>
+</div>
+<scene *ngIf="startGame" [scene]="firstScene"></scene>

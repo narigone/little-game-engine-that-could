@@ -1,0 +1,27 @@
+<div *ngIf="scene" class="row">
+  <div class="row-height">
+    <div  class="image-container col-md-10 col-sm-10 col-xs-9 col-height" >
+      <span class=helper></span>
+      <img [style.display]="currentImageIndex != image.index ? 'none' : 'block' " *ngFor="let image of scene.getImageList()" src="{{image.url}}" id="scene-image-{{image.index}}" usemap="#actionMap"/>
+
+      <div #textContainer class="description-container" >
+        <span [class]="showText ? 'arrow arrow-down' : 'arrow arrow-up'" (click)="toggleShowText()"></span>
+        <div [class]="showText ? 'text text-up' : 'text text-down'" [innerHTML]=scene.description></div>
+      </div>
+    </div>
+    <div class="action-group-container col-md-2 col-sm-2 col-xs-3 col-bottom">
+      <div *ngFor="let action of scene.actions" class=" button-container" (click)="onActionSelected(action)">
+        <button *ngIf="action.area == null " [attr.disabled]="!action.meetsRequirements(characterService) ? 'disabled' : null" class="btn btn-lg">{{action.description}}</button>
+      </div>
+    </div>
+
+    <map name="actionMap" *ngFor="let action of scene.actions" (click)="onActionSelected(action)">
+      <area *ngIf="action.area != null && action.meetsRequirements(characterService)" shape="rect" coords="{{action.area}}" alt="{{action.description}}">
+    </map>
+  </div>
+</div>
+<div *ngIf="!scene" class="row">
+  <div  class="scene-list col-md-12">
+    <p>Error: scene "{{sceneId}}" not found.</p>
+  </div>
+</div>

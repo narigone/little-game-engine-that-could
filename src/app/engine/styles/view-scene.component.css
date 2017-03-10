@@ -1,0 +1,134 @@
+img {
+  max-width: 100%;
+}
+
+button {
+  margin-bottom: 25px;
+  white-space: normal;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9em;
+  background-color: #0780CC;
+}
+
+.col-md-10, .col-md-2, .col-md-12{
+  padding: 0;
+}
+
+.arrow {
+  background-image: url('/assets/icons/arrow.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.description-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  max-height: 50%;
+  min-height: 32px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.text {
+  align-items: stretch;
+  /*height: 100%;*/
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.text > div {
+  height: 100%;
+}
+
+.text-up {
+  display: block;
+}
+
+.text-down {
+  display: none;
+}
+
+.arrow-up{
+  background-position: 0px 0px;
+}
+
+.arrow-down{
+  background-position: 0px -16px;
+}
+
+.image-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  margin: 0;
+  height: auto;
+  max-height: 100%;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+.image-container img{
+  margin: auto 0;
+    vertical-align: middle;
+} 
+
+.action-group-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  height: auto;
+  max-height: 100%;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow: auto;
+}
+
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+.scene-list{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media (max-width: 800px) {
+  button{
+    font-size:14px;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+  }
+}

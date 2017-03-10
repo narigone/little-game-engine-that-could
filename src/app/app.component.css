@@ -1,0 +1,38 @@
+
+.splashBox, .disclaimer {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: inline-block;
+}
+
+.splashScreen, .disclaimerScreen{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+.splashLinks{
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  margin: 10px auto;
+  white-space:nowrap;
+}
+
+.splashLinks a{
+  color: #FFFFFF;
+  display:inline-block;
+  float: right;
+  margin-left: 30px;
+}
+
+.patreonIcon{
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+}
